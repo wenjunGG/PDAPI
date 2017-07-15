@@ -1,0 +1,66 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using Models.SysModels
+@model SysUser
+@using Pd.Api.BootstrapSupport
+
+
+<hr />
+<div class="clearfix"></div>
+<div>
+   
+
+    <div class="panel-body">
+        @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "Main" }))
+        {
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-2 text-right">
+                    @Html.LabelFor(model => model.UserName)
+                </div>
+                <div class="col-xs-4">
+                    @Html.EditorFor(model => model.UserName)
+                    @Html.ValidationMessageFor(model => model.UserName)
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-2 text-right">
+                    @Html.LabelFor(model => model.Password)
+                </div>
+                <div class="col-xs-4">
+                    @Html.EditorFor(model => model.Password)
+                    @Html.ValidationMessageFor(model => model.Password)
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2"></div>
+                <div class="col-xs-2 text-right">
+                    @Html.LabelFor(model => model.Remark)
+                </div>
+                <div class="col-xs-4">
+                    @Html.EditorFor(model => model.Remark)
+                    @Html.ValidationMessageFor(model => model.Remark)
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            
+            <div class="text-center">
+                <button type="submit" class="btn"><i class="fa fa-check"></i>Save</button>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+

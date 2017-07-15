@@ -42,9 +42,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity\DicModular.cs" />
+    <Compile Include="Activity\Modular.cs" />
     <Compile Include="DbSetBase.cs" />
+    <Compile Include="Motion\Back.cs" />
+    <Compile Include="Motion\Coefficient.cs" />
+    <Compile Include="Motion\DicPorts.cs" />
+    <Compile Include="Motion\Ports.cs" />
+    <Compile Include="Motion\RequestCoeff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SysModels\SysUser.cs" />
+    <Compile Include="SysModels\SysUserModular.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

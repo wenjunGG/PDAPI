@@ -15,6 +15,7 @@ namespace Models
         Guid? UserId { get; set; }
         DateTime CreatedDate { get; set; }
         DateTime UpdatedDate { get; set; }
+        bool IsTure { get; set; }
         bool Deleted { get; set; }
     }
 
@@ -54,6 +55,10 @@ namespace Models
         [ScaffoldColumn(false)]
         [Column("DELETED")]
         public bool Deleted { get; set; }
+
+        [ScaffoldColumn(false)]
+        [Column("ISTURE")]
+        public bool IsTure { get; set; }
     }
     
 }

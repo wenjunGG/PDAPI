@@ -8,6 +8,9 @@ using System.Threading.Tasks;
 
 namespace Models.SysModels
 {
+    /// <summary>
+    /// 用户表
+    /// </summary>
     [Table("T_SYS_USER")]
     public class SysUser:DbSetBase
     {
@@ -28,5 +31,8 @@ namespace Models.SysModels
         [DataType(DataType.Password)]
         [Required]
         public string Password { get; set; }
+
+
+        public virtual ICollection<SysUserModular> SysUserModular { get; set; }
     }
 }

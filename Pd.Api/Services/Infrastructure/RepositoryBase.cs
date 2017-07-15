@@ -60,7 +60,6 @@ namespace Services.Infrastructure
             var ientity = entity as IDbSetBase;
             if (ientity != null)
             {
-                ientity.EnterpriseId = _userInfo.EnterpriseId;
                 ientity.UserId = _userInfo.UserId;
 
                 if (id.HasValue)
@@ -102,7 +101,7 @@ namespace Services.Infrastructure
         public virtual void Delete(T item)
         {
             var entity = item as IDbSetBase;
-            if (entity != null && entity.EnterpriseId.Equals(_userInfo.EnterpriseId))
+            if (entity != null)
             {
                 entity.Deleted = true;
                 entity.UserId = _userInfo.UserId;

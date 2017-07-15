@@ -6,6 +6,7 @@
 @using System.Reflection
 @model System.Collections.IEnumerable
 @using Pd.Api.BootstrapSupport
+@using Pd.Api.Helper
 
 
 @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "Main" }))
@@ -91,7 +92,7 @@
                 }
             </tbody>
         </table>
-      
+        @Html.Raw(Ajax.MikePager((int)Model.GetType().GetProperty("PageIndex").GetValue(Model, null), (int)Model.GetType().GetProperty("PageSize").GetValue(Model, null), (int)Model.GetType().GetProperty("TotalCount").GetValue(Model, null)))
     </div>
 }
 <!-- 模态框（Modal） -->

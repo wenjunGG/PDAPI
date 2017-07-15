@@ -170,6 +170,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helper\MikePagerAjaxExtensions.cs" />
     <Compile Include="Helper\UserInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -334,6 +335,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{2c2d2e8a-3d80-4b03-a0ea-e0771dc4d78a}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IServices\IServices.csproj">
       <Project>{f26c480d-9fba-4515-8a19-e6a5c29b8045}</Project>
       <Name>IServices</Name>

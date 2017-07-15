@@ -1,4 +1,5 @@
-﻿using IServices.ISysServices;
+﻿using Common.Page;
+using IServices.ISysServices;
 using Models.SysModels;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,7 @@ namespace Pd.Api.Areas.Admin.Controllers
         }
 
         // GET: Admin/User
-        public ActionResult Index()
+        public ActionResult Index(string keyword, string ordering, int pageIndex = 1)
         {
             ViewBag.tag = "用户管理";
 
@@ -29,7 +30,7 @@ namespace Pd.Api.Areas.Admin.Controllers
               });
 
             
-            return View(list);
+            return View(list.ToPagedList(pageIndex));
         }
 
         public ActionResult Edit(Guid? id)

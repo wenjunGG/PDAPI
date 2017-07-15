@@ -180,3 +180,5 @@ E:\项目\APINet\Pd.Api\Pd.Api\bin\zh-Hans\System.Web.Optimization.resources.dll
 E:\项目\APINet\Pd.Api\Pd.Api\obj\Debug\Pd.Api.csprojResolveAssemblyReference.cache
 E:\项目\APINet\Pd.Api\Pd.Api\obj\Debug\Pd.Api.dll
 E:\项目\APINet\Pd.Api\Pd.Api\obj\Debug\Pd.Api.pdb
+E:\项目\APINet\Pd.Api\Pd.Api\bin\Common.dll
+E:\项目\APINet\Pd.Api\Pd.Api\bin\Common.pdb

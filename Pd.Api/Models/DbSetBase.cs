@@ -55,53 +55,5 @@ namespace Models
         [Column("DELETED")]
         public bool Deleted { get; set; }
     }
-
-
-
-    public interface IDbSetBaseForInt
-    {
-        int Id { get; set; }
-        Guid EnterpriseId { get; set; }
-        Guid? UserId { get; set; }
-        DateTime CreatedDate { get; set; }
-        DateTime UpdatedDate { get; set; }
-        bool Deleted { get; set; }
-    }
-
-    public abstract class DbSetBaseForInt : IDbSetBaseForInt
-    {
-        protected DbSetBaseForInt()
-        {
-            Id = 0;
-            CreatedDate = DateTime.Now;
-            UpdatedDate = DateTime.Now;
-            Deleted = false;
-        }
-
-        [Key]
-        [ScaffoldColumn(false)]
-        [Column("ID")]
-        public int Id { get; set; }
-
-        [HiddenInput(DisplayValue = false)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd HH:mm}", ApplyFormatInEditMode = true)]
-        [Column("CREATEDDATE")]
-        public DateTime CreatedDate { get; set; }
-
-        [ScaffoldColumn(false)]
-        [Column("UPDATEDDATE")]
-        public DateTime UpdatedDate { get; set; }
-
-        [ScaffoldColumn(false)]
-        [Column("ENTERPRISEID")]
-        public Guid EnterpriseId { get; set; }
-
-        [ScaffoldColumn(false)]
-        [Column("USERID")]
-        public Guid? UserId { get; set; }
-
-        [ScaffoldColumn(false)]
-        [Column("DELETED")]
-        public bool Deleted { get; set; }
-    }
+    
 }

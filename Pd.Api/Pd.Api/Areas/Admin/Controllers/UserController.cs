@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.SysModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,9 @@ namespace Pd.Api.Areas.Admin.Controllers
         // GET: Admin/User
         public ActionResult Index()
         {
-            return View();
+            var list = new List<SysUser>();
+
+            return View(list);
         }
     }
 }

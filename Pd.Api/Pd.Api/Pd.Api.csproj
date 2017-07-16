@@ -294,7 +294,7 @@
     <Content Include="Script\Front\css\normalize.min.css" />
     <Content Include="Script\Front\css\templatemo_misc.css" />
     <Content Include="Script\Front\css\templatemo_style.css" />
-    <Content Include="Script\Front\css\templatemo_style_1.js" />
+    <Content Include="Script\Front\css\templatemo_style_1.css" />
     <Content Include="Script\Front\fonts\fontawesome-webfont.svg" />
     <Content Include="Script\Front\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Script\Front\fonts\linecons.svg" />

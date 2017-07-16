@@ -41,4 +41,3 @@ E:\项目\APINet\Pd.Api\Models\bin\Debug\zh-Hans\System.Web.WebPages.resources.d
 E:\项目\APINet\Pd.Api\Models\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\项目\APINet\Pd.Api\Models\obj\Debug\Models.dll
 E:\项目\APINet\Pd.Api\Models\obj\Debug\Models.pdb
-E:\项目\APINet\Pd.Api\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

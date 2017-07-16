@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.Activity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -14,6 +15,14 @@ namespace Models.Motion
    [Table("T_MON_Back")]
   public  class Back:DbSetBase
     {
+        /// <summary>
+        /// 模块ID
+        /// </summary>
+        [ForeignKey("Modular")]
+        public Guid ModularID { get; set; }
+        [ScaffoldColumn(false)]
+        public virtual Modular Modular { get; set; }
+
         /// <summary>
         /// 接口ID
         /// </summary>

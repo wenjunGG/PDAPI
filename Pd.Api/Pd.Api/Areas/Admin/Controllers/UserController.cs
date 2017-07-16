@@ -45,8 +45,10 @@ namespace Pd.Api.Areas.Admin.Controllers
             return View(user);
         }
         [HttpPost]
-        public ActionResult Edit(Guid? id,SysUser Collection)
+        public ActionResult Edit(Guid? id,SysUser Collection,string ischeck)
         {
+            Collection.IsTure =ischeck=="on"?true:false;
+
             if (!ModelState.IsValid)
             {
                 Edit(id);

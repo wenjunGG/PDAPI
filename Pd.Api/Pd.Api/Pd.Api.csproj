@@ -165,6 +165,7 @@
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserModularController.cs" />
     <Compile Include="Areas\Play\PlayAreaRegistration.cs" />
+    <Compile Include="BootstrapSupport\ControlGroupExtensions.cs" />
     <Compile Include="BootstrapSupport\ViewHelperExtensions.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -191,6 +192,13 @@
     <Content Include="Areas\Admin\Views\User\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Index\Index.cshtml" />
     <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Modular\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Modular\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DicModular\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Ports\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Ports\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Coefficient\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Coefficient\Edit.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -301,16 +309,13 @@
     <Content Include="Script\assets\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Script\assets\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Script\assets\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Views\Shared\_validationSummary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Back\" />
-    <Folder Include="Areas\Admin\Views\Coefficient\" />
-    <Folder Include="Areas\Admin\Views\DicModular\" />
     <Folder Include="Areas\Admin\Views\DicPorts\" />
-    <Folder Include="Areas\Admin\Views\Modular\" />
-    <Folder Include="Areas\Admin\Views\Ports\" />
     <Folder Include="Areas\Admin\Views\RequestCoeff\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Areas\Admin\Views\UserModular\" />

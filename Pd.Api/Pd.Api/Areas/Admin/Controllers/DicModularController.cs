@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IServices.ISysServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,13 @@ namespace Pd.Api.Areas.Admin.Controllers
 {
     public class DicModularController : Controller
     {
+        private readonly IDicModularSerice _idicModularSerice;
+        public DicModularController(IDicModularSerice idicModularSerice)
+        {
+            _idicModularSerice = idicModularSerice;
+        }
+
+
         // GET: Admin/DicModular
         public ActionResult Index()
         {

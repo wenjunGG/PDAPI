@@ -12,7 +12,7 @@
  * below are for informational purposes only.
  *
  * NUGET: END LICENSE TEXT */
-/*! matchMedia() polyfill - Test a CSS media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
+/*! matchMedia() polyfill - Test a css media type/query in JS. Authors & copyright (c) 2012: Scott Jehl, Paul Irish, Nicholas Zakas. Dual MIT/BSD license */
 /*! NOTE: If you're already including a window.matchMedia polyfill via Modernizr or otherwise, you don't need this part */
 window.matchMedia = window.matchMedia || (function(doc, undefined){
   
@@ -72,24 +72,24 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 		requestQueue	= [],
 		
 		//loop stylesheets, send text content to translate
-		ripCSS			= function(){
+		ripcss			= function(){
 			var sheets 	= links,
 				sl 		= sheets.length,
 				i		= 0,
 				//vars for loop:
-				sheet, href, media, isCSS;
+				sheet, href, media, iscss;
 
 			for( ; i < sl; i++ ){
 				sheet	= sheets[ i ],
 				href	= sheet.href,
 				media	= sheet.media,
-				isCSS	= sheet.rel && sheet.rel.toLowerCase() === "stylesheet";
+				iscss	= sheet.rel && sheet.rel.toLowerCase() === "stylesheet";
 
 				//only links plz and prevent re-parsing
-				if( !!href && isCSS && !parsedSheets[ href ] ){
-					// selectivizr exposes css through the rawCssText expando
-					if (sheet.styleSheet && sheet.styleSheet.rawCssText) {
-						translate( sheet.styleSheet.rawCssText, href, media );
+				if( !!href && iscss && !parsedSheets[ href ] ){
+					// selectivizr exposes css through the rawcssText expando
+					if (sheet.styleSheet && sheet.styleSheet.rawcssText) {
+						translate( sheet.styleSheet.rawcssText, href, media );
 						parsedSheets[ href ] = true;
 					} else {
 						if( (!/^([a-zA-Z:]*\/\/)/.test( href ) && !base)
@@ -122,7 +122,7 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 		translate			= function( styles, href, media ){
 			var qs			= styles.match(  /@media[^\{]+\{([^\{\}]*\{[^\}\{]*\})+/gi ),
 				ql			= qs && qs.length || 0,
-				//try to get CSS path
+				//try to get css path
 				href		= href.substring( 0, href.lastIndexOf( "/" )),
 				repUrls		= function( css ){
 					return css.replace( /(url\()['"]?([^\/\)'"][^:\)'"]+)['"]?(\))/g, "$1" + href + "$2$3" );
@@ -137,7 +137,7 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 				
 			//if no internal queries exist, but media attr does, use that	
 			//note: this currently lacks support for situations where a media attr is specified on a link AND
-				//its associated stylesheet has internal CSS media queries.
+				//its associated stylesheet has internal css media queries.
 				//In those cases, the media attribute will currently be ignored.
 			if( useMedia ){
 				ql = 1;
@@ -220,7 +220,7 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 		applyMedia			= function( fromResize ){
 			var name		= "clientWidth",
 				docElemProp	= docElem[ name ],
-				currWidth 	= doc.compatMode === "CSS1Compat" && docElemProp || doc.body[ name ] || docElemProp,
+				currWidth 	= doc.compatMode === "css1Compat" && docElemProp || doc.body[ name ] || docElemProp,
 				styleBlocks	= {},
 				lastLink	= links[ links.length-1 ],
 				now 		= (new Date()).getTime();
@@ -321,11 +321,11 @@ window.matchMedia = window.matchMedia || (function(doc, undefined){
 			};
 		})();
 	
-	//translate CSS
-	ripCSS();
+	//translate css
+	ripcss();
 	
 	//expose update for re-running respond later on
-	respond.update = ripCSS;
+	respond.update = ripcss;
 	
 	//adjust on resize
 	function callMedia(){

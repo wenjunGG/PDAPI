@@ -47,7 +47,7 @@ intellisense.annotate(jQuery, {
     /// </signature>
   },
   'boxModel': function() {
-    /// <summary>Deprecated in jQuery 1.3 (see jQuery.support). States if the current page, in the user's browser, is being rendered using the W3C CSS Box Model.</summary>
+    /// <summary>Deprecated in jQuery 1.3 (see jQuery.support). States if the current page, in the user's browser, is being rendered using the W3C css Box Model.</summary>
     /// <returns type="Boolean" />
   },
   'browser': function() {
@@ -74,7 +74,7 @@ intellisense.annotate(jQuery, {
     /// </signature>
   },
   'cssHooks': function() {
-    /// <summary>Hook directly into jQuery to override how particular CSS properties are retrieved or set, normalize CSS property naming, or create custom properties.</summary>
+    /// <summary>Hook directly into jQuery to override how particular css properties are retrieved or set, normalize css property naming, or create custom properties.</summary>
     /// <returns type="Object" />
   },
   'data': function() {
@@ -827,16 +827,16 @@ intellisense.annotate(jQuery.fn, {
   },
   'animate': function() {
     /// <signature>
-    ///   <summary>Perform a custom animation of a set of CSS properties.</summary>
-    ///   <param name="properties" type="PlainObject">An object of CSS properties and values that the animation will move toward.</param>
+    ///   <summary>Perform a custom animation of a set of css properties.</summary>
+    ///   <param name="properties" type="PlainObject">An object of css properties and values that the animation will move toward.</param>
     ///   <param name="duration" type="">A string or number determining how long the animation will run.</param>
     ///   <param name="easing" type="String">A string indicating which easing function to use for the transition.</param>
     ///   <param name="complete" type="Function">A function to call once the animation is complete.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Perform a custom animation of a set of CSS properties.</summary>
-    ///   <param name="properties" type="PlainObject">An object of CSS properties and values that the animation will move toward.</param>
+    ///   <summary>Perform a custom animation of a set of css properties.</summary>
+    ///   <param name="properties" type="PlainObject">An object of css properties and values that the animation will move toward.</param>
     ///   <param name="options" type="PlainObject">A map of additional options to pass to the method.</param>
     ///   <returns type="jQuery" />
     /// </signature>
@@ -1107,19 +1107,19 @@ intellisense.annotate(jQuery.fn, {
   },
   'css': function() {
     /// <signature>
-    ///   <summary>Set one or more CSS properties for the set of matched elements.</summary>
-    ///   <param name="propertyName" type="String">A CSS property name.</param>
+    ///   <summary>Set one or more css properties for the set of matched elements.</summary>
+    ///   <param name="propertyName" type="String">A css property name.</param>
     ///   <param name="value" type="Number">A value to set for the property.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Set one or more CSS properties for the set of matched elements.</summary>
-    ///   <param name="propertyName" type="String">A CSS property name.</param>
+    ///   <summary>Set one or more css properties for the set of matched elements.</summary>
+    ///   <param name="propertyName" type="String">A css property name.</param>
     ///   <param name="function(index, value)" type="Function">A function returning the value to set. this is the current element. Receives the index position of the element in the set and the old value as arguments.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Set one or more CSS properties for the set of matched elements.</summary>
+    ///   <summary>Set one or more css properties for the set of matched elements.</summary>
     ///   <param name="properties" type="PlainObject">An object of property-value pairs to set.</param>
     ///   <returns type="jQuery" />
     /// </signature>
@@ -1472,12 +1472,12 @@ intellisense.annotate(jQuery.fn, {
   },
   'height': function() {
     /// <signature>
-    ///   <summary>Set the CSS height of every matched element.</summary>
+    ///   <summary>Set the css height of every matched element.</summary>
     ///   <param name="value" type="Number">An integer representing the number of pixels, or an integer with an optional unit of measure appended (as a string).</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Set the CSS height of every matched element.</summary>
+    ///   <summary>Set the css height of every matched element.</summary>
     ///   <param name="function(index, height)" type="Function">A function returning the height to set. Receives the index position of the element in the set and the old height as arguments. Within the function, this refers to the current element in the set.</param>
     ///   <returns type="jQuery" />
     /// </signature>
@@ -1548,28 +1548,28 @@ intellisense.annotate(jQuery.fn, {
   },
   'init': function() {
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="selector" type="String">A string containing a selector expression</param>
     ///   <param name="context" type="jQuery">A DOM Element, Document, or jQuery to use as context</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="element" type="Element">A DOM element to wrap in a jQuery object.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="elementArray" type="Array">An array containing a set of DOM elements to wrap in a jQuery object.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="object" type="PlainObject">A plain object to wrap in a jQuery object.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="jQuery object" type="PlainObject">An existing jQuery object to clone.</param>
     ///   <returns type="jQuery" />
     /// </signature>
@@ -2595,12 +2595,12 @@ intellisense.annotate(jQuery.fn, {
   },
   'width': function() {
     /// <signature>
-    ///   <summary>Set the CSS width of each element in the set of matched elements.</summary>
+    ///   <summary>Set the css width of each element in the set of matched elements.</summary>
     ///   <param name="value" type="Number">An integer representing the number of pixels, or an integer along with an optional unit of measure appended (as a string).</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Set the CSS width of each element in the set of matched elements.</summary>
+    ///   <summary>Set the css width of each element in the set of matched elements.</summary>
     ///   <param name="function(index, width)" type="Function">A function returning the width to set. Receives the index position of the element in the set and the old width as arguments. Within the function, this refers to the current element in the set.</param>
     ///   <returns type="jQuery" />
     /// </signature>
@@ -2641,28 +2641,28 @@ intellisense.annotate(jQuery.fn, {
 intellisense.annotate(window, {
   '$': function() {
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="selector" type="String">A string containing a selector expression</param>
     ///   <param name="context" type="jQuery">A DOM Element, Document, or jQuery to use as context</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="element" type="Element">A DOM element to wrap in a jQuery object.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="elementArray" type="Array">An array containing a set of DOM elements to wrap in a jQuery object.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="object" type="PlainObject">A plain object to wrap in a jQuery object.</param>
     ///   <returns type="jQuery" />
     /// </signature>
     /// <signature>
-    ///   <summary>Accepts a string containing a CSS selector which is then used to match a set of elements.</summary>
+    ///   <summary>Accepts a string containing a css selector which is then used to match a set of elements.</summary>
     ///   <param name="jQuery object" type="PlainObject">An existing jQuery object to clone.</param>
     ///   <returns type="jQuery" />
     /// </signature>

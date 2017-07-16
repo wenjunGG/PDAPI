@@ -593,7 +593,7 @@ function isArraylike( obj ) {
 }
 var Sizzle =
 /*!
- * Sizzle CSS Selector Engine v1.10.16
+ * Sizzle css Selector Engine v1.10.16
  * http://sizzlejs.com/
  *
  * Copyright 2013 jQuery Foundation, Inc. and other contributors
@@ -671,9 +671,9 @@ var i,
 	// http://www.w3.org/TR/css3-syntax/#characters
 	characterEncoding = "(?:\\\\.|[\\w-]|[^\\x00-\\xa0])+",
 
-	// Loosely modeled on CSS identifier characters
-	// An unquoted value should be a CSS identifier http://www.w3.org/TR/css3-selectors/#attribute-selectors
-	// Proper syntax: http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
+	// Loosely modeled on css identifier characters
+	// An unquoted value should be a css identifier http://www.w3.org/TR/css3-selectors/#attribute-selectors
+	// Proper syntax: http://www.w3.org/TR/css21/syndata.html#value-def-identifier
 	identifier = characterEncoding.replace( "w", "w#" ),
 
 	// Acceptable operators http://www.w3.org/TR/selectors/#attribute-selectors
@@ -726,7 +726,7 @@ var i,
 	rsibling = /[+~]/,
 	rescape = /'|\\/g,
 
-	// CSS escapes http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
+	// css escapes http://www.w3.org/TR/css21/syndata.html#escaped-characters
 	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
 	funescape = function( _, escaped, escapedWhitespace ) {
 		var high = "0x" + escaped - 0x10000;
@@ -1901,7 +1901,7 @@ Expr = Sizzle.selectors = {
 		},
 
 		"checked": function( elem ) {
-			// In CSS3, :checked should return both checked and selected elements
+			// In css3, :checked should return both checked and selected elements
 			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
 			var nodeName = elem.nodeName.toLowerCase();
 			return (nodeName === "input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
@@ -6107,7 +6107,7 @@ var rnumnonpx = new RegExp( "^(" + pnum + ")(?!px)[a-z%]+$", "i" );
 
 
 
-var getStyles, curCSS,
+var getStyles, curcss,
 	rposition = /^(top|right|bottom|left)$/;
 
 if ( window.getComputedStyle ) {
@@ -6115,7 +6115,7 @@ if ( window.getComputedStyle ) {
 		return elem.ownerDocument.defaultView.getComputedStyle( elem, null );
 	};
 
-	curCSS = function( elem, name, computed ) {
+	curcss = function( elem, name, computed ) {
 		var width, minWidth, maxWidth, ret,
 			style = elem.style;
 
@@ -6133,7 +6133,7 @@ if ( window.getComputedStyle ) {
 			// A tribute to the "awesome hack by Dean Edwards"
 			// Chrome < 17 and Safari 5.0 uses "computed value" instead of "used value" for margin-right
 			// Safari 5.1.7 (at least) returns percentage for a larger set of values, but width seems to be reliably pixels
-			// this is against the CSSOM draft spec: http://dev.w3.org/csswg/cssom/#resolved-values
+			// this is against the cssOM draft spec: http://dev.w3.org/csswg/cssom/#resolved-values
 			if ( rnumnonpx.test( ret ) && rmargin.test( name ) ) {
 
 				// Remember the original values
@@ -6163,7 +6163,7 @@ if ( window.getComputedStyle ) {
 		return elem.currentStyle;
 	};
 
-	curCSS = function( elem, name, computed ) {
+	curcss = function( elem, name, computed ) {
 		var left, rs, rsLeft, ret,
 			style = elem.style;
 
@@ -6429,7 +6429,7 @@ function addGetHookIf( conditionFn, hookFn ) {
 })();
 
 
-// A method for quickly swapping in/out CSS properties to get correct calculations.
+// A method for quickly swapping in/out css properties to get correct calculations.
 jQuery.swap = function( elem, options, callback, args ) {
 	var ret, name,
 		old = {};
@@ -6456,7 +6456,7 @@ var
 	ropacity = /opacity\s*=\s*([^)]*)/,
 
 	// swappable if display is none or starts with table except "table", "table-cell", or "table-caption"
-	// see here for display values: https://developer.mozilla.org/en-US/docs/CSS/display
+	// see here for display values: https://developer.mozilla.org/en-US/docs/css/display
 	rdisplayswap = /^(none|table(?!-c[ea]).+)/,
 	rnumsplit = new RegExp( "^(" + pnum + ")(.*)$", "i" ),
 	rrelNum = new RegExp( "^([+-])=(" + pnum + ")", "i" ),
@@ -6607,7 +6607,7 @@ function getWidthOrHeight( elem, name, extra ) {
 	// MathML - https://bugzilla.mozilla.org/show_bug.cgi?id=491668
 	if ( val <= 0 || val == null ) {
 		// Fall back to computed then uncomputed css if necessary
-		val = curCSS( elem, name, styles );
+		val = curcss( elem, name, styles );
 		if ( val < 0 || val == null ) {
 			val = elem.style[ name ];
 		}
@@ -6645,7 +6645,7 @@ jQuery.extend({
 			get: function( elem, computed ) {
 				if ( computed ) {
 					// We should always get a number back from opacity
-					var ret = curCSS( elem, "opacity" );
+					var ret = curcss( elem, "opacity" );
 					return ret === "" ? "1" : ret;
 				}
 			}
@@ -6707,7 +6707,7 @@ jQuery.extend({
 				return;
 			}
 
-			// If a number was passed in, add 'px' to the (except for certain CSS properties)
+			// If a number was passed in, add 'px' to the (except for certain css properties)
 			if ( type === "number" && !jQuery.cssNumber[ origName ] ) {
 				value += "px";
 			}
@@ -6722,7 +6722,7 @@ jQuery.extend({
 			if ( !hooks || !("set" in hooks) || (value = hooks.set( elem, value, extra )) !== undefined ) {
 
 				// Support: IE
-				// Swallow errors from 'invalid' CSS values (#5509)
+				// Swallow errors from 'invalid' css values (#5509)
 				try {
 					// Support: Chrome, Safari
 					// Setting style to blank string required to delete "style: x !important;"
@@ -6760,7 +6760,7 @@ jQuery.extend({
 
 		// Otherwise, if a way to get the computed value exists, use that
 		if ( val === undefined ) {
-			val = curCSS( elem, name, styles );
+			val = curcss( elem, name, styles );
 		}
 
 		//convert "normal" to computed value
@@ -6856,7 +6856,7 @@ jQuery.cssHooks.marginRight = addGetHookIf( support.reliableMarginRight,
 			// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
 			// Work around by temporarily setting element display to inline-block
 			return jQuery.swap( elem, { "display": "inline-block" },
-				curCSS, [ elem, "marginRight" ] );
+				curcss, [ elem, "marginRight" ] );
 		}
 	}
 );
@@ -10058,7 +10058,7 @@ function getWindow( elem ) {
 
 jQuery.offset = {
 	setOffset: function( elem, options, i ) {
-		var curPosition, curLeft, curCSSTop, curTop, curOffset, curCSSLeft, calculatePosition,
+		var curPosition, curLeft, curcssTop, curTop, curOffset, curcssLeft, calculatePosition,
 			position = jQuery.css( elem, "position" ),
 			curElem = jQuery( elem ),
 			props = {};
@@ -10069,10 +10069,10 @@ jQuery.offset = {
 		}
 
 		curOffset = curElem.offset();
-		curCSSTop = jQuery.css( elem, "top" );
-		curCSSLeft = jQuery.css( elem, "left" );
+		curcssTop = jQuery.css( elem, "top" );
+		curcssLeft = jQuery.css( elem, "left" );
 		calculatePosition = ( position === "absolute" || position === "fixed" ) &&
-			jQuery.inArray("auto", [ curCSSTop, curCSSLeft ] ) > -1;
+			jQuery.inArray("auto", [ curcssTop, curcssLeft ] ) > -1;
 
 		// need to be able to calculate position if either top or left is auto and position is either absolute or fixed
 		if ( calculatePosition ) {
@@ -10080,8 +10080,8 @@ jQuery.offset = {
 			curTop = curPosition.top;
 			curLeft = curPosition.left;
 		} else {
-			curTop = parseFloat( curCSSTop ) || 0;
-			curLeft = parseFloat( curCSSLeft ) || 0;
+			curTop = parseFloat( curcssTop ) || 0;
+			curLeft = parseFloat( curcssLeft ) || 0;
 		}
 
 		if ( jQuery.isFunction( options ) ) {
@@ -10225,8 +10225,8 @@ jQuery.each( [ "top", "left" ], function( i, prop ) {
 	jQuery.cssHooks[ prop ] = addGetHookIf( support.pixelPosition,
 		function( elem, computed ) {
 			if ( computed ) {
-				computed = curCSS( elem, prop );
-				// if curCSS returns percentage, fallback to offset
+				computed = curcss( elem, prop );
+				// if curcss returns percentage, fallback to offset
 				return rnumnonpx.test( computed ) ?
 					jQuery( elem ).position()[ prop ] + "px" :
 					computed;

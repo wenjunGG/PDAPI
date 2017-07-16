@@ -30,7 +30,7 @@
  */
 
 /*
- * Modernizr tests which native CSS3 and HTML5 features are available in
+ * Modernizr tests which native css3 and HTML5 features are available in
  * the current UA and makes the results available to you in two ways:
  * as properties on a global Modernizr object, and as classes on the
  * <html> element. This information allows you to progressively enhance
@@ -116,7 +116,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
 
     /*>>teststyles*/
-    // Inject element with style element and some CSS rules
+    // Inject element with style element and some css rules
     injectElementWithStyles = function( rule, callback, nodes, testnames ) {
 
       var style, ret, node, docOverflow,
@@ -307,17 +307,17 @@ window.Modernizr = (function( window, document, undefined ) {
     }
 
     /**
-     * setCss applies given styles to the Modernizr DOM node.
+     * setcss applies given styles to the Modernizr DOM node.
      */
-    function setCss( str ) {
+    function setcss( str ) {
         mStyle.cssText = str;
     }
 
     /**
-     * setCssAll extrapolates all vendor-specific css strings.
+     * setcssAll extrapolates all vendor-specific css strings.
      */
-    function setCssAll( str1, str2 ) {
-        return setCss(prefixes.join(str1 + ';') + ( str2 || '' ));
+    function setcssAll( str1, str2 ) {
+        return setcss(prefixes.join(str1 + ';') + ( str2 || '' ));
     }
 
     /**
@@ -336,9 +336,9 @@ window.Modernizr = (function( window, document, undefined ) {
 
     /*>>testprop*/
 
-    // testProps is a generic CSS / DOM property test.
+    // testProps is a generic css / DOM property test.
 
-    // In testing support for a given CSS property, it's legit to test:
+    // In testing support for a given css property, it's legit to test:
     //    `elem.style[styleName] !== undefined`
     // If the property is supported it will return an empty string,
     // if unsupported it will return undefined.
@@ -347,7 +347,7 @@ window.Modernizr = (function( window, document, undefined ) {
     // on our modernizr element, but instead just testing undefined vs
     // empty string.
 
-    // Because the testing of the CSS property names (with "-", as
+    // Because the testing of the css property names (with "-", as
     // opposed to the camelCase DOM properties) is non-portable and
     // non-standard but works in WebKit and IE (but not Gecko or Opera),
     // we explicitly reject properties with dashes so that authors
@@ -553,7 +553,7 @@ window.Modernizr = (function( window, document, undefined ) {
     tests['rgba'] = function() {
         // Set an rgba() color and check the returned value
 
-        setCss('background-color:rgba(150,255,150,.5)');
+        setcss('background-color:rgba(150,255,150,.5)');
 
         return contains(mStyle.backgroundColor, 'rgba');
     };
@@ -562,7 +562,7 @@ window.Modernizr = (function( window, document, undefined ) {
         // Same as rgba(), in fact, browsers re-map hsla() to rgba() internally,
         //   except IE9 who retains it as hsla
 
-        setCss('background-color:hsla(120,40%,100%,.5)');
+        setcss('background-color:hsla(120,40%,100%,.5)');
 
         return contains(mStyle.backgroundColor, 'rgba') || contains(mStyle.backgroundColor, 'hsla');
     };
@@ -572,7 +572,7 @@ window.Modernizr = (function( window, document, undefined ) {
         //  and then querying the style.background property value for the number of
         //  occurrences of "url(" is a reliable method for detecting ACTUAL support for this!
 
-        setCss('background:url(https://),url(https://),red url(https://)');
+        setcss('background:url(https://),url(https://),red url(https://)');
 
         // If the UA supports multiple backgrounds, there should be three occurrences
         //   of the string "url(" in the return value for elemStyle.background
@@ -613,11 +613,11 @@ window.Modernizr = (function( window, document, undefined ) {
 
 
     tests['opacity'] = function() {
-        // Browsers that actually have CSS Opacity implemented have done so
+        // Browsers that actually have css Opacity implemented have done so
         //  according to spec, which means their return values are within the
         //  range of [0.0,1.0] - including the leading zero.
 
-        setCssAll('opacity:.55');
+        setcssAll('opacity:.55');
 
         // The non-literal . in this regex is intentional:
         //   German Chrome returns this value as 0,55
@@ -641,10 +641,10 @@ window.Modernizr = (function( window, document, undefined ) {
 
     tests['cssgradients'] = function() {
         /**
-         * For CSS Gradients syntax, please see:
+         * For css Gradients syntax, please see:
          * webkit.org/blog/175/introducing-css-gradients/
-         * developer.mozilla.org/en/CSS/-moz-linear-gradient
-         * developer.mozilla.org/en/CSS/-moz-radial-gradient
+         * developer.mozilla.org/en/css/-moz-linear-gradient
+         * developer.mozilla.org/en/css/-moz-radial-gradient
          * dev.w3.org/csswg/css3-images/#gradients-
          */
 
@@ -652,7 +652,7 @@ window.Modernizr = (function( window, document, undefined ) {
             str2 = 'gradient(linear,left top,right bottom,from(#9f9),to(white));',
             str3 = 'linear-gradient(left top,#9f9, white);';
 
-        setCss(
+        setcss(
              // legacy webkit syntax (FIXME: remove when syntax not in use anymore)
               (str1 + '-webkit- '.split(' ').join(str2 + str1) +
              // standard syntax             // trailing 'background-image:'
@@ -700,7 +700,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
     /*>>fontface*/
     // @font-face detection routine by Diego Perini
-    // javascript.nwbox.com/CSSSupport/
+    // javascript.nwbox.com/cssSupport/
 
     // false positives:
     //   WebOS github.com/Modernizr/Modernizr/issues/342
@@ -720,7 +720,7 @@ window.Modernizr = (function( window, document, undefined ) {
     };
     /*>>fontface*/
 
-    // CSS generated content detection
+    // css generated content detection
     tests['generatedcontent'] = function() {
         var bool;
 
@@ -1023,7 +1023,7 @@ window.Modernizr = (function( window, document, undefined ) {
 
 
     // Reset modElem.cssText to nothing to reduce memory footprint.
-    setCss('');
+    setcss('');
     modElem = inputElem = null;
 
     /*>>shiv*/
@@ -1081,10 +1081,10 @@ window.Modernizr = (function( window, document, undefined ) {
       /*--------------------------------------------------------------------------*/
 
       /**
-       * Creates a style sheet with the given CSS text and adds it to the document.
+       * Creates a style sheet with the given css text and adds it to the document.
        * @private
        * @param {Document} ownerDocument The document.
-       * @param {String} cssText The CSS text.
+       * @param {String} cssText The css text.
        * @returns {StyleSheet} The style element.
        */
       function addStyleSheet(ownerDocument, cssText) {
@@ -1233,8 +1233,8 @@ window.Modernizr = (function( window, document, undefined ) {
         }
         var data = getExpandoData(ownerDocument);
 
-        if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
-          data.hasCSS = !!addStyleSheet(ownerDocument,
+        if (html5.shivcss && !supportsHtml5Styles && !data.hascss) {
+          data.hascss = !!addStyleSheet(ownerDocument,
             // corrects block display not defined in IE6/7/8/9
             'article,aside,figcaption,figure,footer,header,hgroup,nav,section{display:block}' +
             // adds styling not present in IE6/7/8/9
@@ -1256,7 +1256,7 @@ window.Modernizr = (function( window, document, undefined ) {
        * @example
        *
        * // options can be changed before the script is included
-       * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
+       * html5 = { 'elements': 'mark section', 'shivcss': false, 'shivMethods': false };
        */
       var html5 = {
 
@@ -1272,7 +1272,7 @@ window.Modernizr = (function( window, document, undefined ) {
          * @memberOf html5
          * @type Boolean
          */
-        'shivCSS': (options.shivCSS !== false),
+        'shivcss': (options.shivcss !== false),
 
         /**
          * Is equal to true if a browser supports creating unknown/HTML5 elements

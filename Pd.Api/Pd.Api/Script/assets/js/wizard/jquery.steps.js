@@ -169,15 +169,15 @@ function destroy(wizard, options)
         .removeData("state").removeData("steps").removeData("eventNamespace")
         .find(".actions a").unbind(eventNamespace);
 
-    // Remove attributes and CSS classes from the wizard
-    wizard.removeClass(options.clearFixCssClass + " vertical");
+    // Remove attributes and css classes from the wizard
+    wizard.removeClass(options.clearFixcssClass + " vertical");
 
     var contents = wizard.find(".content > *");
 
     // Remove virtual data objects from panels and their titles
     contents.removeData("loaded").removeData("mode").removeData("url");
 
-    // Remove attributes, CSS classes and reset inline styles on all panels and their titles
+    // Remove attributes, css classes and reset inline styles on all panels and their titles
     contents.removeAttr("id").removeAttr("role").removeAttr("tabindex")
         .removeAttr("class").removeAttr("style")._removeAria("labelledby")
         ._removeAria("hidden");
@@ -961,15 +961,15 @@ function render(wizard, options, state)
     // Create a content wrapper and copy HTML from the intial wizard structure
     var wrapperTemplate = "<{0} class=\"{1}\">{2}</{0}>",
         orientation = getValidEnumValue(stepsOrientation, options.stepsOrientation),
-        verticalCssClass = (orientation === stepsOrientation.vertical) ? " vertical" : "",
-        contentWrapper = $(format(wrapperTemplate, options.contentContainerTag, "content " + options.clearFixCssClass, wizard.html())),
-        stepsWrapper = $(format(wrapperTemplate, options.stepsContainerTag, "steps " + options.clearFixCssClass, "<ul role=\"tablist\"></ul>")),
+        verticalcssClass = (orientation === stepsOrientation.vertical) ? " vertical" : "",
+        contentWrapper = $(format(wrapperTemplate, options.contentContainerTag, "content " + options.clearFixcssClass, wizard.html())),
+        stepsWrapper = $(format(wrapperTemplate, options.stepsContainerTag, "steps " + options.clearFixcssClass, "<ul role=\"tablist\"></ul>")),
         stepTitles = contentWrapper.children(options.headerTag),
         stepContents = contentWrapper.children(options.bodyTag);
 
     // Transform the wizard wrapper and remove the inner HTML
     wizard.attr("role", "application").empty().append(stepsWrapper).append(contentWrapper)
-        .addClass(options.cssClass + " " + options.clearFixCssClass + verticalCssClass);
+        .addClass(options.cssClass + " " + options.clearFixcssClass + verticalcssClass);
 
     // Add WIA-ARIA support
     stepContents.each(function (index)
@@ -1039,7 +1039,7 @@ function renderPagination(wizard, options, state)
             buttons += format(buttonTemplate, "finish", options.labels.finish);
         }
 
-        wizard.append(format(pagination, options.actionContainerTag, options.clearFixCssClass,
+        wizard.append(format(pagination, options.actionContainerTag, options.clearFixcssClass,
             options.labels.pagination, buttons));
 
         refreshPagination(wizard, options, state);
@@ -1665,12 +1665,12 @@ var defaults = $.fn.steps.defaults = {
     /**
      * The css class which will be used for floating scenarios.
      *
-     * @property clearFixCssClass
+     * @property clearFixcssClass
      * @type String
      * @default "clearfix"
      * @for defaults
      **/
-    clearFixCssClass: "clearfix",
+    clearFixcssClass: "clearfix",
 
     /**
      * Determines whether the steps are vertically or horizontally oriented.

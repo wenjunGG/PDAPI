@@ -2,4 +2,3 @@ E:\项目\APINet\Pd.Api\Common\bin\Debug\Common.dll
 E:\项目\APINet\Pd.Api\Common\bin\Debug\Common.pdb
 E:\项目\APINet\Pd.Api\Common\obj\Debug\Common.dll
 E:\项目\APINet\Pd.Api\Common\obj\Debug\Common.pdb
-E:\项目\APINet\Pd.Api\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

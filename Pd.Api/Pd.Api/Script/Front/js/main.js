@@ -19,8 +19,8 @@
 		var id =  $(this).attr('class');
 		id = id.split('-');
 		$("#menu-container .content").hide();
-		$("#menu-container #menu-"+id[1]).addClass("animated fadeInDown").show();
-		return false;
+        $("#menu-container #menu-" + id[1]).addClass("animated fadeInDown").show();
+        return true;
 	});
 
 	$(".menu a.homebutton").click(function(){

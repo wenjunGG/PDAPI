@@ -323,6 +323,7 @@
     <Content Include="Script\Front\js\bootstrap.js" />
     <Content Include="Script\Front\js\IframeAuto.js" />
     <Content Include="Script\Front\js\jquery.easing-1.3.js" />
+    <Content Include="Script\Front\js\jquery.unobtrusive-ajax.js" />
     <Content Include="Script\Front\js\main.js" />
     <Content Include="Script\Front\js\plugins.js" />
     <Content Include="Script\Front\js\vendor\jquery-1.10.1.min.js" />
@@ -368,6 +369,7 @@
     <Content Include="Script\Front\fonts\revicons.woff" />
     <Content Include="Script\Front\js\.DS_Store" />
     <Content Include="Views\Home\Gallery.cshtml" />
+    <Content Include="Script\Front\js\jquery-2.1.1.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Services.SysServices
 {
-    public class DicModularSerice : RepositoryBase<DicModular>, IDicModularSerice
+    public class DicModularService : RepositoryBase<DicModular>, IDicModularService
     {
-        public DicModularSerice(IDatabaseFactory databaseFactory, IUserInfo userInfo) : base(databaseFactory, userInfo)
+        public DicModularService(IDatabaseFactory databaseFactory, IUserInfo userInfo) : base(databaseFactory, userInfo)
         {
         }
     }

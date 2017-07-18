@@ -13,5 +13,10 @@ namespace Pd.Api.Areas.Play.Controllers
         {
             return View();
         }
+
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }

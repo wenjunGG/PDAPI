@@ -17,7 +17,8 @@ namespace Pd.Api.Areas.Play
             context.MapRoute(
                 "Play_default",
                 "Play/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+               new[] { "Pd.Api.Areas.Play.Controllers" }
             );
         }
     }

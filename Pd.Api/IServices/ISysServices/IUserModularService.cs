@@ -1,5 +1,5 @@
 ﻿using IServices.Infrastructure;
-using Models.Activity;
+using Models.SysModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IServices.ISysServices
 {
-   public interface IDicModularSerice : IRepository<DicModular>
+   public interface IUserModularService : IRepository<SysUserModular>
     {
     }
 }

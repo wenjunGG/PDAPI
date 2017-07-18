@@ -45,13 +45,14 @@
     <Compile Include="Infrastructure\IUnitOfWork.cs" />
     <Compile Include="ISysServices\IBackService.cs" />
     <Compile Include="ISysServices\ICoefficientService.cs" />
-    <Compile Include="ISysServices\IDicModularSerice.cs" />
+    <Compile Include="ISysServices\IDicModularService.cs" />
     <Compile Include="ISysServices\IDicPortsService.cs" />
     <Compile Include="ISysServices\IModularService.cs" />
     <Compile Include="ISysServices\IPortsService.cs" />
     <Compile Include="ISysServices\IRequestCoeffService.cs" />
     <Compile Include="ISysServices\ISysUserService.cs" />
     <Compile Include="ISysServices\IUserInfo.cs" />
+    <Compile Include="ISysServices\IUserModularService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

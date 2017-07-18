@@ -9,17 +9,10 @@ namespace Pd.Api.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ISysUserService _isysUserservcie;
-
-        public HomeController(ISysUserService isysUserservcie)
-        {
-            _isysUserservcie = isysUserservcie;
-        }
-
         public ActionResult Index()
         {
-           var ListUser=_isysUserservcie.GetAll().ToList();
-            return View();
+          
+            return RedirectToAction("Index", "Home", new { area = "Play" });
         }
 
         public ActionResult About()

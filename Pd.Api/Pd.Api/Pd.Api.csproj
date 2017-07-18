@@ -200,6 +200,16 @@
     <Content Include="Areas\Admin\Views\Ports\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Coefficient\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Coefficient\Edit.cshtml" />
+    <Content Include="Areas\Play\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Play\Views\Home\About.cshtml" />
+    <Content Include="Areas\Admin\Views\UserModular\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\UserModular\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\DicModular\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Back\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Back\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DicPorts\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\DicPorts\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\RequestCoeff\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -374,13 +384,8 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Views\Back\" />
-    <Folder Include="Areas\Admin\Views\DicPorts\" />
-    <Folder Include="Areas\Admin\Views\RequestCoeff\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Areas\Admin\Views\UserModular\" />
     <Folder Include="Areas\Play\Models\" />
-    <Folder Include="Areas\Play\Views\Home\" />
     <Folder Include="Areas\Play\Views\Shared\" />
     <Folder Include="Models\" />
   </ItemGroup>

@@ -25,9 +25,9 @@
                 <div class="menu-wrapper">
                     <ul class="menu">
                         <li><a class="homebutton" href="#">Home</a></li>
-                        <li>@Ajax.ActionLink("About", "About", "Home", new AjaxOptions { UpdateTargetId = "Main" }, new { @class = "show-1" })</li>
-                        <li><a class="show-2" href="#">Services</a></li>
-                        <li><a class="show-3" href="#">Gallery</a></li>
+                        <li>@Ajax.ActionLink("About", "About", "Home", new AjaxOptions { UpdateTargetId = "Main_1" }, new { @class = "show-1" })</li>
+                        <li>@Ajax.ActionLink("Service", "Services", "Home", new AjaxOptions { UpdateTargetId = "Main_2" }, new { @class = "show-2" })</li>
+                        <li>@Ajax.ActionLink("Gallery", "Gallery", "Home", new AjaxOptions { UpdateTargetId = "Main_3" }, new { @class = "show-3" })</li>
                         <li><a class="show-4" href="#" onClick="templatemo_map();">Contact</a></li>
                     </ul> <!-- /.menu -->
                     <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
@@ -47,11 +47,10 @@
                 <div id="menu-1" class="services content">
                     <section class="container" id="content">
                         <div class="col-md-8 col-sm-12">
-                            <div id="Main" class="block-area">
+                            <div id="Main_1" class="block-area">
 
                             </div>
                         </div>
-
                     </section>
 
                     @*<iframe id="mainFrame" name="mainFrame" scrolling="no" src="/Home/About"
@@ -62,129 +61,23 @@
                 </div>
 
                 <div id="menu-2" class="services content">
-                    <div class="row">
-                        <ul class="tabs">
-                            <li class="col-md-4 col-sm-4">
-                                <a href="#tab4" class="icon-item">
-                                    <i class="fa fa-cogs"></i>
-                                </a> <!-- /.icon-item -->
-                            </li>
-                            <li class="col-md-4 col-sm-4">
-                                <a href="#tab5" class="icon-item">
-                                    <i class="fa fa-leaf"></i>
-                                </a> <!-- /.icon-item -->
-                            </li>
-                            <li class="col-md-4 col-sm-4">
-                                <a href="#tab6" class="icon-item">
-                                    <i class="fa fa-users"></i>
-                                </a> <!-- /.icon-item -->
-                            </li>
-                        </ul> <!-- /.tabs -->
-                        <div class="col-md-12 col-sm-12">
-                            <div class="toggle-content text-center" id="tab4">
-                                <h3>Our Services</h3>
-                                <p>
-                                    You can easily change icons by <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/">Font Awesome</a>. Example: <strong>&lt;i class=&quot;fa fa-users&quot;&gt;&lt;/i&gt;</strong> In varius eros ac est interdum, quis scelerisque elit semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                                    <br><br>Donec mattis enim sit amet nisl faucibus, eu pulvinar nibh facilisis. Aliquam erat volutpat. Vivamus tempus, nisi varius imperdiet molestie, velit mi feugiat felis, sit amet fringilla mi massa sit amet arcu. Mauris dictum nisl id felis lacinia congue. Aliquam lectus nisi, sodales in lacinia quis, lobortis vel sem. Vestibulum elit nisi, placerat eget auctor ut, dictum at libero.
-                                </p>
-                            </div>
+                    <section class="container" id="content">
+                        <div class="col-md-8 col-sm-12">
+                            <div id="Main_2" class="block-area">
 
-                            <div class="toggle-content text-center" id="tab5">
-                                <h3>Our Support</h3>
-                                <p>
-                                    Nulla consequat nibh mattis metus sodales, at eleifend tortor tempor. Sed auctor lacus felis. Maecenas auctor enim libero, vel viverra nulla fringilla quis. Sed eget aliquet arcu. Suspendisse ac dignissim nunc, id pretium elit. Nunc id neque vel leo semper gravida non ut enim. Cras sed posuere magna.
-                                    <br><br>Morbi eget ante sed felis tristique interdum. In varius eros ac est interdum, quis scelerisque elit semper. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                                </p>
                             </div>
-
-                            <div class="toggle-content text-center" id="tab6">
-                                <h3>Testimonials</h3>
-                                <p>
-                                    Etiam dictum, quam quis pharetra tincidunt, enim nunc faucibus ipsum, vitae condimentum ligula est eu dui. Sed tincidunt tincidunt sapien non feugiat. Aenean lacinia tempor leo, et euismod ligula porta non. Quisque lectus ante, rutrum eu neque volutpat, euismod lobortis velit. Suspendisse felis risus, tempor ac vehicula eu, volutpat volutpat sem. Donec quis orci nisl. Integer euismod lacus nec risus sollicitudin molestie vel semper turpis.
-                                    <br><br>In varius imperdiet enim quis iaculis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris ac mauris aliquam magna molestie posuere in id elit. Integer semper metus felis, fringilla congue elit commodo a. Donec eget rutrum libero.
-                                </p>
-                            </div>
-                        </div> <!-- /.col-md-12 -->
-                    </div> <!-- /.row -->
+                        </div>
+                    </section>
                 </div> <!-- /.services -->
 
                 <div id="menu-3" class="gallery content">
-                    <div class="row">
+                    <section class="container" id="content">
+                        <div class="col-md-8 col-sm-12">
+                            <div id="Main_3" class="block-area">
 
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g1.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g1.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g2.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g2.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g3.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g3.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g4.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g4.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g5.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g5.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g6.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g6.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g7.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g7.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g8.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g8.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-                        <div class="col-md-4 col-ms-6">
-                            <div class="g-item">
-                                <img src="~/Script/Front/images/gallery/g9.jpg" alt="">
-                                <a data-rel="lightbox" class="overlay" href="~/Script/Front/images/gallery/g9.jpg">
-                                    <span>+</span>
-                                </a>
-                            </div> <!-- /.g-item -->
-                        </div> <!-- /.col-md-4 -->
-
-                    </div> <!-- /.row -->
+                            </div>
+                        </div>
+                    </section>
                 </div> <!-- /.gallery -->
 
                 <div id="menu-4" class="contact content">
@@ -232,6 +125,7 @@
                     </div> <!-- /.row -->
                 </div> <!-- /.contact -->
 
+            
             </div> <!-- /#menu-container -->
 
         </div> <!-- /.col-md-8 -->

@@ -63,3 +63,4 @@ E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Models\bin\Debug\zh-Hans\System.Web.Web
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Models\bin\Debug\zh-Hans\System.Web.WebPages.Deployment.resources.dll
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Models\obj\Debug\Models.dll
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Models\obj\Debug\Models.pdb
+E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache

@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using Models.Activity
+@model  Modular
+@using Pd.Api.BootstrapSupport
+
+
+<hr />
+<div class="clearfix"></div>
+<div>
+
+
+    <div class="panel-body">
+        @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "Main" }))
+        {
+            <div>
+                @Html.Partial("_validationSummary")
+            </div>
+
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+                    <label class="control-label">模块名</label>
+                </div>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" placeholder="模块名*必填" name="@Html.NameFor(Model=>Model.ModularName)" value="@Model.ModularName" />
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+                    <label class="control-label">备注</label>
+                </div>
+                <div class="col-xs-6">
+                    <textarea class="form-control" rows="3" placeholder="文本域" name="@Html.NameFor(Model=>Model.Remark)">@Model.Remark</textarea>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+
+                </div>
+                <div class="col-xs-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="ischeck" name="ischeck" checked="@Model.IsTure">可用
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-4">
+                    <button type="submit" class="btn"><i class="fa fa-check"></i>Save</button>
+                    <button type="button" class="btn"><i class="fa fa-check"></i>取消</button>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

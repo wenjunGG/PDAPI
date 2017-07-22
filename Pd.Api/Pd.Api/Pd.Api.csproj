@@ -221,6 +221,8 @@
     <Content Include="Areas\Play\Views\PModular\ModularDetail.cshtml" />
     <Content Include="Areas\Play\Views\PPort\Index.cshtml" />
     <Content Include="Areas\Play\Views\PPort\PortDetail.cshtml" />
+    <Content Include="Areas\Play\Views\Home\PortIndex.cshtml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\css\flip-carousel.css" />
     <Content Include="Scripts\css\foundation-icons.css" />
@@ -348,6 +350,7 @@
     <Content Include="Script\Front\images\next.png" />
     <Content Include="Script\Front\images\previous.png" />
     <Content Include="Script\Front\images\progress.gif" />
+    <Content Include="Script\Front\images\stander.png" />
     <Content Include="Script\Front\images\team\member-1.jpg" />
     <Content Include="Script\Front\images\team\member-2.jpg" />
     <Content Include="Script\Front\images\team\member-3.jpg" />

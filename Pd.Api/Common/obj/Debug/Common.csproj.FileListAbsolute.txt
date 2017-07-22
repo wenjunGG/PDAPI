@@ -8,3 +8,8 @@ E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Common\bin\Debug\Common.pdb
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Common\obj\Debug\Common.dll
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Common\obj\Debug\Common.pdb
+E:\项目\APINet\PDAPI\Pd.Api\Common\bin\Debug\Common.dll
+E:\项目\APINet\PDAPI\Pd.Api\Common\bin\Debug\Common.pdb
+E:\项目\APINet\PDAPI\Pd.Api\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+E:\项目\APINet\PDAPI\Pd.Api\Common\obj\Debug\Common.dll
+E:\项目\APINet\PDAPI\Pd.Api\Common\obj\Debug\Common.pdb

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IServices.ISysServices;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,14 @@ namespace Pd.Api.Areas.Play.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IModularService _IModularService;
+        private readonly IPortsService _IPortsService;
+
+        public HomeController(IModularService IModularService, IPortsService IPortsService)
+        {
+            _IModularService = IModularService;
+            _IPortsService = IPortsService;
+        }
         // GET: Play/Home
         public ActionResult Index()
         {
@@ -21,7 +30,9 @@ namespace Pd.Api.Areas.Play.Controllers
 
         public ActionResult Services()
         {
-            return View();
+            var list = _IModularService.GetAllEnt().Where(t => t.IsTure);
+          
+            return View(list);
         }
 
         public ActionResult Gallery()
@@ -33,5 +44,13 @@ namespace Pd.Api.Areas.Play.Controllers
         {
             return View();
         }
+
+        //接口
+        public ActionResult PortIndex(Guid?id)
+        {
+           var list=_IPortsService.GetAllEnt().Where(t => t.IsTure && t.ModularID == id.Value);
+            return View(list);
+        }
+
     }
 }

@@ -1,0 +1,110 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@using Models.Activity
+@model  DicModular
+@using Pd.Api.BootstrapSupport
+
+
+<hr />
+<div class="clearfix"></div>
+<div>
+
+
+    <div class="panel-body">
+        @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "Main" }))
+        {
+            <div>
+                @Html.Partial("_validationSummary")
+            </div>
+
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+                    <label class="control-label">模块名</label>
+                </div>
+                <div class="col-xs-6">
+                    <select id="@Html.NameFor(Model=>Model.ModularID)" class="form-control" name="@Html.NameFor(Model=>Model.ModularID)">
+                        @foreach (var mod in ViewBag.mo as SelectList)
+                        {
+                            <option value="@mod.Value" selected="@mod.Selected">@mod.Text</option>
+                        }
+                    </select>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+                    <label class="control-label">字典名</label>
+                </div>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" placeholder="字典名*必填" name="@Html.NameFor(Model=>Model.DicName)" value="@Model.DicName" />
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+                    <label class="control-label">字典值</label>
+                </div>
+                <div class="col-xs-6">
+                    <input type="text" class="form-control" placeholder="字典值*必填" name="@Html.NameFor(Model=>Model.DicValue)" value="@Model.DicValue" />
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+                    <label class="control-label">备注</label>
+                </div>
+                <div class="col-xs-6">
+                    <textarea class="form-control" rows="3" placeholder="文本域" name="@Html.NameFor(Model=>Model.Remark)">@Model.Remark</textarea>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+
+            <div class="row" style=" margin-top:10px;">
+                <div class="col-xs-2 text-right">
+
+                </div>
+                <div class="col-xs-6">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" id="ischeck" name="ischeck" checked="@Model.IsTure">可用
+                        </label>
+                        <label>
+                            <input type="checkbox" id="ischeck_page" name="ischeck_page" checked="@Model.IsImportant">重要
+                        </label>
+                    </div>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-xs-3"></div>
+                <div class="col-xs-4">
+                    <button type="submit" class="btn"><i class="fa fa-check"></i>Save</button>
+                    <button type="button" class="btn"><i class="fa fa-check"></i>取消</button>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

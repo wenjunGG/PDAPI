@@ -213,7 +213,6 @@
     <Content Include="Areas\Admin\Views\DicPorts\Index.cshtml" />
     <Content Include="Areas\Admin\Views\DicPorts\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\RequestCoeff\Index.cshtml" />
-    <Content Include="Areas\Play\Views\Home\Services.cshtml" />
     <Content Include="Areas\Play\Views\Home\Contact.cshtml" />
     <Content Include="Areas\Play\Views\Home\Gallery.cshtml" />
     <Content Include="Areas\Play\Views\Service\Index.cshtml" />
@@ -221,7 +220,6 @@
     <Content Include="Areas\Play\Views\PModular\ModularDetail.cshtml" />
     <Content Include="Areas\Play\Views\PPort\Index.cshtml" />
     <Content Include="Areas\Play\Views\PPort\PortDetail.cshtml" />
-    <Content Include="Areas\Play\Views\Home\PortIndex.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\css\flip-carousel.css" />

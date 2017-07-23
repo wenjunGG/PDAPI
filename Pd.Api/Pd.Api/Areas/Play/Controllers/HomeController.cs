@@ -30,9 +30,7 @@ namespace Pd.Api.Areas.Play.Controllers
 
         public ActionResult Services()
         {
-            var list = _IModularService.GetAllEnt().Where(t => t.IsTure);
-          
-            return View(list);
+           return  RedirectToAction("Index","PModular","/Play/PModular");
         }
 
         public ActionResult Gallery()
@@ -45,12 +43,6 @@ namespace Pd.Api.Areas.Play.Controllers
             return View();
         }
 
-        //接口
-        public ActionResult PortIndex(Guid?id)
-        {
-           var list=_IPortsService.GetAllEnt().Where(t => t.IsTure && t.ModularID == id.Value);
-            return View(list);
-        }
-
+      
     }
 }

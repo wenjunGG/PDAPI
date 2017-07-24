@@ -220,6 +220,7 @@
     <Content Include="Areas\Play\Views\PModular\ModularDetail.cshtml" />
     <Content Include="Areas\Play\Views\PPort\Index.cshtml" />
     <Content Include="Areas\Play\Views\PPort\PortDetail.cshtml" />
+    <Content Include="Areas\Play\Views\PPort\Result.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\css\flip-carousel.css" />

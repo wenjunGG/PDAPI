@@ -1,4 +1,9 @@
 ﻿
+@using Models.Motion
+@model IEnumerable<Coefficient>
+@using Pd.Api.BootstrapSupport
+@using Pd.Api.Helper;
+@using System.Reflection
 
 <div class="toggle-content text-center" id="tab4">
     <h3>详细</h3>
@@ -9,42 +14,69 @@
 </div>
 
 <div class="toggle-content text-center" id="tab4">
-    <form class="form-horizontal">
+    @using (Ajax.BeginForm(new AjaxOptions { UpdateTargetId = "Result" }))
+    {
         <div class="form-group">
-            <label for="exampleInputAount7" class="col-sm-2 control-label">UserName</label>
-            <div class="col-sm-10">
-                <input type="text" class="form-control" id="exampleInputAount7" placeholder="UserName">
-            </div>
+            <h3>
+                 @((ViewBag.ports as Ports).PortsName) 接口
+            </h3>
+        </div>
+        <hr />
 
+       foreach (var item in Model.ToList())
+       {
+        <div class="form-group">
+            <label for="exampleInputAount7" class="col-sm-2 control-label">@item.CoffiName</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="@item.CoeffiCode" name="@item.CoeffiCode" placeholder="UserName" value="">
+            </div>
+        </div>
+
+
+       }
+        <hr />
+
+        <div class="form-group">
+            <label for="exampleInputAount7" class="col-sm-2 control-label">请求url</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="exampleInputAount7" placeholder="UserName" value="@((ViewBag.ports as Ports).PortsIp)@((ViewBag.ports as Ports).PortsAddress)">
+                <input type="text" id="url" name="url" value="@((ViewBag.ports as Ports).PortsIp)@((ViewBag.ports as Ports).PortsAddress)" />
+            </div>
         </div>
 
         <div class="form-group">
-            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+            <label for="exampleInputAount7" class="col-sm-2 control-label">请求方式</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                <input type="text" class="form-control" id="PortsType" name="PortsType" placeholder="UserName" value="@((ViewBag.ports as Ports).PortsType)">
             </div>
         </div>
 
-        <div class="form-group">
-            <label for="exampleInputPassword7" class="col-sm-2 control-label">PassWord</label>
-            <div class="col-sm-10">
-                <input type="password" class="form-control" id="exampleInputPassword7" placeholder="PassWord">
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-sm-2">
-                <div class="checkbox">
-                    <label>
-                        <input type="checkbox">
-                    </label>
+        if ((ViewBag.ports as Ports).IsPag==true)
+        {
+            <div class="form-group">
+                <label for="exampleInputAount7" class="col-sm-2 control-label">请求页码</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="pageIndex" name="pageIndex" placeholder="UserName" value="1">
                 </div>
             </div>
-            <div class="col-sm-10 pull-left">
-               check me
+
+            <div class="form-group">
+                <label for="exampleInputAount7" class="col-sm-2 control-label">请求方式</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="pageSize" name="pageSize" placeholder="UserName" value="10">
+                </div>
             </div>
-        </div>
-        <div class="col-sm-offset-2 col-sm-10">
+        }
+
+
+        <div class="col-sm-offset-2 col-sm-2">
             <button type="submit" class="btn btn-info">Submit</button>
         </div>
-    </form>
+   }
+    
 </div>
+
+<div  id="Result">
+
+</div>
+

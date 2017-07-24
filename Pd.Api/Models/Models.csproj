@@ -54,5 +54,8 @@
     <Compile Include="SysModels\SysUser.cs" />
     <Compile Include="SysModels\SysUserModular.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="View\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

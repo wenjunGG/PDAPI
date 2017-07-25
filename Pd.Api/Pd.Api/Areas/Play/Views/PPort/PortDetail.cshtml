@@ -28,7 +28,7 @@
         <div class="form-group">
             <label for="exampleInputAount7" class="col-sm-2 control-label">@item.CoffiName</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="@item.CoeffiCode" name="@item.CoeffiCode" placeholder="UserName" value="">
+                <input type="text" class="form-control" id="@item.CoeffiCode" name="@item.CoeffiCode" placeholder="@item.CoeffiCode" value="">
             </div>
         </div>
 
@@ -36,11 +36,14 @@
        }
         <hr />
 
+        <input type="hidden" id="id" name="id"  value="@((ViewBag.ports as Ports).Id)"/>
+
+
         <div class="form-group">
             <label for="exampleInputAount7" class="col-sm-2 control-label">请求url</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="exampleInputAount7" placeholder="UserName" value="@((ViewBag.ports as Ports).PortsIp)@((ViewBag.ports as Ports).PortsAddress)">
-                <input type="text" id="url" name="url" value="@((ViewBag.ports as Ports).PortsIp)@((ViewBag.ports as Ports).PortsAddress)" />
+                <input type="text" class="form-control" id="url" name="url" placeholder="UserName" value="@((ViewBag.ports as Ports).PortsIp)@((ViewBag.ports as Ports).PortsAddress)">
+                @*<input type="text" id="url" name="url" value="@((ViewBag.ports as Ports).PortsIp)@((ViewBag.ports as Ports).PortsAddress)" />*@
             </div>
         </div>
 

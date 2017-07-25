@@ -14,12 +14,14 @@ namespace Pd.Api.Areas.Play.Controllers
     {
         private readonly IPortsService _IPortsService;
         private readonly ICoefficientService _ICoefficientService;
+        private readonly IHeaderService _iheaderService;
 
         private static string res = "";
-        public PPortController( IPortsService IPortsService, ICoefficientService ICoefficientService)
+        public PPortController( IPortsService IPortsService, ICoefficientService ICoefficientService, IHeaderService iheaderService)
         {
             _IPortsService = IPortsService;
             _ICoefficientService = ICoefficientService;
+            _iheaderService = iheaderService;
         }
         // GET: Play/Port
         public ActionResult Index(Guid?id)
@@ -42,23 +44,42 @@ namespace Pd.Api.Areas.Play.Controllers
             return View(model);
         }
         [HttpPost]
-        public ActionResult PortDetail(FormCollection collect,string url,string PortsType)
+        public ActionResult PortDetail(FormCollection collect,string url,string PortsType,Guid id)
         {
-          
+            Guid modularid = Guid.Empty;
+            var Ports= _IPortsService.GetAllEnt().FirstOrDefault(t => t.Id == id);
+            if (Ports != null)
+            {
+                modularid = Ports.ModularID;
+            }
+            var head_List=_iheaderService.GetAllEnt().Where(t => t.ModularID == modularid);
+
             NameValueCollection nameValue = new NameValueCollection();
             NameValueCollection headList = new NameValueCollection();
             foreach (var key in collect.AllKeys)
             {
-                if (key == "url" || key == "PortsType") continue;
+                if (key == "url" || key == "PortsType"||key=="id"||key== "X-Requested-With") continue;
+
+               var head=head_List.FirstOrDefault(t => t.HeaderCode == key);
+               if (head!= null)
+                {
+                    headList.Add(key, collect.GetValue(key).AttemptedValue);
+                    continue;
+                }
+
                 nameValue.Add(key, collect.GetValue(key).AttemptedValue);
             }
            
 
          
-            WebUtility.Request(url, PortsType, new NameValueCollection(), headList);
+           string message=WebUtility.Request(url, PortsType, nameValue, headList);
+
+            //操作json数据
+
+           
         
 
-            res = "out";
+            res = message;
 
             return RedirectToAction("Result");
         }

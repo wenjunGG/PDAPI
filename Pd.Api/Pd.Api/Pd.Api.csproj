@@ -366,6 +366,7 @@
     <Content Include="Script\Front\js\jquery.unobtrusive-ajax.js" />
     <Content Include="Script\Front\js\main.js" />
     <Content Include="Script\Front\js\plugins.js" />
+    <Content Include="Script\Front\js\treeJson.js" />
     <Content Include="Script\Front\js\vendor\jquery-1.10.1.min.js" />
     <Content Include="Script\Front\js\vendor\jquery.gmap3.min.js" />
     <Content Include="Script\Front\js\vendor\modernizr-2.6.2.min.js" />

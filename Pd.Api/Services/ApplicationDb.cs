@@ -34,6 +34,7 @@ namespace Services
       
         public DbSet<DicModular> DicModular { get; set; } //模块字典表
         public DbSet<Modular> Modular { get; set; } //模块表
+        public DbSet<Header> Header { get; set; }//头文件表
 
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

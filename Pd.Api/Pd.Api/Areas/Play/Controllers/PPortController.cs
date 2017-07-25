@@ -42,22 +42,21 @@ namespace Pd.Api.Areas.Play.Controllers
             return View(model);
         }
         [HttpPost]
-        public ActionResult PortDetail(FormCollection collect, Ports port,string url,string PortsType)
+        public ActionResult PortDetail(FormCollection collect,string url,string PortsType)
         {
-            Dictionary<string, string> dic = new Dictionary<string, string>();
+          
             NameValueCollection nameValue = new NameValueCollection();
+            NameValueCollection headList = new NameValueCollection();
             foreach (var key in collect.AllKeys)
             {
-                dic.Add(key, collect.GetValue(key).AttemptedValue);
+                if (key == "url" || key == "PortsType") continue;
                 nameValue.Add(key, collect.GetValue(key).AttemptedValue);
             }
-            NameValueCollection headList = new NameValueCollection();
-            headList.Add("lwj","123");
+           
 
-            if(PortsType.ToLower()=="get")
-            WebUtility.Request(url, "get", new NameValueCollection(), headList);
-            else
-            WebUtility.Request(url, "post", new NameValueCollection(), headList);
+         
+            WebUtility.Request(url, PortsType, new NameValueCollection(), headList);
+        
 
             res = "out";
 

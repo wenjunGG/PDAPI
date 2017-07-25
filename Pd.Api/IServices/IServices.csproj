@@ -47,6 +47,7 @@
     <Compile Include="ISysServices\ICoefficientService.cs" />
     <Compile Include="ISysServices\IDicModularService.cs" />
     <Compile Include="ISysServices\IDicPortsService.cs" />
+    <Compile Include="ISysServices\IHeaderService.cs" />
     <Compile Include="ISysServices\IModularService.cs" />
     <Compile Include="ISysServices\IPortsService.cs" />
     <Compile Include="ISysServices\IRequestCoeffService.cs" />

@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activity\DicModular.cs" />
+    <Compile Include="Activity\Header.cs" />
     <Compile Include="Activity\Modular.cs" />
     <Compile Include="DbSetBase.cs" />
     <Compile Include="Motion\Back.cs" />

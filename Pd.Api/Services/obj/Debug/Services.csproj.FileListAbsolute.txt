@@ -141,3 +141,4 @@ E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.Migrations.init1.resou
 E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.csproj.GenerateResource.Cache
 E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.dll
 E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.pdb
+E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.Migrations.init_2.resources

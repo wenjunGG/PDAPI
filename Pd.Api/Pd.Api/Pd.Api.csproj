@@ -158,6 +158,7 @@
     <Compile Include="Areas\Admin\Controllers\CoefficientController.cs" />
     <Compile Include="Areas\Admin\Controllers\DicModularController.cs" />
     <Compile Include="Areas\Admin\Controllers\DicPortsController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HeadController.cs" />
     <Compile Include="Areas\Admin\Controllers\IndexController.cs" />
     <Compile Include="Areas\Admin\Controllers\ModularController.cs" />
     <Compile Include="Areas\Admin\Controllers\PortsController.cs" />
@@ -221,6 +222,8 @@
     <Content Include="Areas\Play\Views\PPort\Index.cshtml" />
     <Content Include="Areas\Play\Views\PPort\PortDetail.cshtml" />
     <Content Include="Areas\Play\Views\PPort\Result.cshtml" />
+    <Content Include="Areas\Admin\Views\Head\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Head\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\css\flip-carousel.css" />

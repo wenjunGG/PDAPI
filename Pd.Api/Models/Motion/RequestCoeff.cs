@@ -35,11 +35,13 @@ namespace Models.Motion
         /// <summary>
         /// 请求参数Code
         /// </summary>
+        [MaxLength(50)]
         public string CoeffCode { get; set; }
 
         /// <summary>
         /// 请求参数值
         /// </summary>
+        [MaxLength(50)]
         public string CoffValue { get; set; }
         
     }

@@ -29,7 +29,7 @@ namespace Models
             Deleted = false;
         }
 
-        [MaxLength(200)]
+        [MaxLength(3000)]
         [DataType(DataType.MultilineText)]
         [Column("REMARK")]
         public string Remark { get; set; }

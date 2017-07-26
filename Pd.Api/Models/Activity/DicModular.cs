@@ -25,13 +25,15 @@ namespace Models.Activity
         /// <summary>
         /// 字典项
         /// </summary>
+        [MaxLength(50)]
         public string DicName { get; set; }
 
         /// <summary>
         /// 字典值
         /// </summary>
+        [MaxLength(50)]
         public string DicValue { get; set; }
-        
+
 
         /// <summary>
         /// 是否重要

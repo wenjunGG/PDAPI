@@ -26,21 +26,25 @@ namespace Models.Motion
         /// <summary>
         /// 接口名
         /// </summary>
+        [MaxLength(50)]
         public string PortsName { get; set; }
 
         /// <summary>
         /// 接口请求Ip
         /// </summary>
+        [MaxLength(50)]
         public string PortsIp { get; set; }
 
         /// <summary>
         /// 接口请求地址
         /// </summary>
+        [MaxLength(50)]
         public string PortsAddress { get; set; }
 
         /// <summary>
         /// 接口请求的方式
         /// </summary>
+        [MaxLength(50)]
         public string PortsType { get; set; }
 
         /// <summary>

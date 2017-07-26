@@ -34,11 +34,13 @@ namespace Models.Motion
         /// <summary>
         /// 返回Code
         /// </summary>
+        [MaxLength(50)]
         public string BackCode { get; set; }
 
         /// <summary>
         /// 返回消息
         /// </summary>
+        [MaxLength(50)]
         public string BackMess { get; set; }
 
 

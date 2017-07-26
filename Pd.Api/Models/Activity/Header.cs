@@ -21,11 +21,13 @@ namespace Models.Activity
         /// <summary>
         /// 头Code
         /// </summary>
+        [MaxLength(50)]
         public string HeaderCode { get; set; }
 
         /// <summary>
         /// 头名称
         /// </summary>
+        [MaxLength(50)]
         public string HeaderName { get; set; }
 
 

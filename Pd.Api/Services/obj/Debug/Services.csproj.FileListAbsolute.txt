@@ -104,8 +104,6 @@ E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\bin\Debug\zh-Hans\System.Web.W
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.csprojResolveAssemblyReference.cache
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.dll
 E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.pdb
-E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.Migrations.init1.resources
-E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.csproj.GenerateResource.Cache
 E:\项目\APINet\PDAPI\Pd.Api\Services\bin\Debug\Services.dll.config
 E:\项目\APINet\PDAPI\Pd.Api\Services\bin\Debug\Services.dll
 E:\项目\APINet\PDAPI\Pd.Api\Services\bin\Debug\Services.pdb
@@ -141,4 +139,5 @@ E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.Migrations.init1.resou
 E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.csproj.GenerateResource.Cache
 E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.dll
 E:\项目\APINet\PDAPI\Pd.Api\Services\obj\Debug\Services.pdb
-E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.Migrations.init_2.resources
+E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.Migrations.init_1.resources
+E:\Protect_Stander\PDApiCom\PDAPI\Pd.Api\Services\obj\Debug\Services.csproj.GenerateResource.Cache

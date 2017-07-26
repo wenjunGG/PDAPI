@@ -31,16 +31,18 @@ namespace Models.Motion
         public Guid PortsID { get; set; }
         [ScaffoldColumn(false)]
         public virtual Ports Ports { get; set; }
-        
+
 
         /// <summary>
         /// 参数Code
         /// </summary>
+        [MaxLength(50)]
         public string CoeffiCode { get; set; }
 
         /// <summary>
         /// 参数名
         /// </summary>
+        [MaxLength(50)]
         public string CoffiName { get; set; }
         
     }

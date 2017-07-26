@@ -1,6 +1,7 @@
 ﻿using Models.SysModels;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
@@ -17,6 +18,7 @@ namespace Models.Activity
         /// <summary>
         /// 模块名称
         /// </summary>
+        [MaxLength(50)]
         public string ModularName { get; set; }
 
         public virtual ICollection<SysUserModular> SysUserModular { get; set; }

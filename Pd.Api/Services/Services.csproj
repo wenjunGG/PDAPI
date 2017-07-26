@@ -58,13 +58,9 @@
     <Compile Include="Infrastructure\IDatabaseFactory.cs" />
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
-    <Compile Include="Migrations\201707181017430_init——1.cs" />
-    <Compile Include="Migrations\201707181017430_init——1.Designer.cs">
-      <DependentUpon>201707181017430_init——1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201707250740110_init_2.cs" />
-    <Compile Include="Migrations\201707250740110_init_2.Designer.cs">
-      <DependentUpon>201707250740110_init_2.cs</DependentUpon>
+    <Compile Include="Migrations\201707261127065_init_1.cs" />
+    <Compile Include="Migrations\201707261127065_init_1.Designer.cs">
+      <DependentUpon>201707261127065_init_1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -95,11 +91,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201707181017430_init——1.resx">
-      <DependentUpon>201707181017430_init——1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201707250740110_init_2.resx">
-      <DependentUpon>201707250740110_init_2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707261127065_init_1.resx">
+      <DependentUpon>201707261127065_init_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
